@@ -1,0 +1,77 @@
+public class Main {
+
+    // Método para imprimir a tabuada de um número
+    public static void tabuada(int num) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+
+    // Método para imprimir o maior de dois números
+    public static void imprimirMaior(int num1, int num2) {
+        int maior = num1 > num2 ? num1 : num2;
+        System.out.println("O maior número é: " + maior);
+    }
+
+    // Método para verificar se duas strings são iguais
+    public static void verificarIguais(String str1, String str2) {
+        if (str1.equals(str2)) {
+            System.out.println("As strings são iguais");
+        } else {
+            System.out.println("As strings não são iguais");
+        }
+    }
+
+    // Método para imprimir o menor de dois números
+    public static void imprimirMenor(int num1, int num2) {
+        int menor = num1 < num2 ? num1 : num2;
+        System.out.println("O menor número é: " + menor);
+    }
+
+    // Método para verificar se duas strings são iguais e retornar uma mensagem
+    public static String verificarIguaisRetorno(String str1, String str2) {
+        if (str1.equals(str2)) {
+            return "Os nomes são iguais";
+        } else {
+            return "Os nomes não são iguais";
+        }
+    }
+
+    // Método para converter Celsius para Fahrenheit
+    public static double celsiusParaFahrenheit(double celsius) {
+        return (celsius * 1.8) + 32;
+    }
+
+    // Método para calcular a área de um círculo
+    public static double calcularAreaCirculo(double raio) {
+        return Math.PI * Math.pow(raio, 2);
+    }
+
+    public static void main(String[] args) {
+        // Exemplos de uso dos métodos
+
+        // Tabuada do 5
+        tabuada(5);
+
+        // Maior número entre 7 e 12
+        imprimirMaior(7, 12);
+
+        // Verificar se duas strings são iguais
+        verificarIguais("hello", "hello");
+
+        // Menor número entre 15 e 9
+        imprimirMenor(15, 9);
+
+        // Verificar se duas strings são iguais e retornar uma mensagem
+        String resultado = verificarIguaisRetorno("hello", "world");
+        System.out.println(resultado);
+
+        // Converter 20 graus Celsius para Fahrenheit
+        double fahrenheit = celsiusParaFahrenheit(20);
+        System.out.println("20 graus Celsius é igual a " + fahrenheit + " Fahrenheit");
+
+        // Calcular a área de um círculo com raio 5
+        double area = calcularAreaCirculo(5);
+        System.out.println("A área do círculo com raio 5 é: " + area);
+    }
+}
